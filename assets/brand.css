@@ -2,7 +2,7 @@
   --terracotta:#B5654A; --terracotta-dk:#9C5239; --olive:#5F6F52; --sand:#E8DCC9;
   --taupe:#A79586; --charcoal:#2F2F2F; --cream:#F6F1EA; --white:#FFFDF9; --line:#E2D6C4;
   --muted:#6E655C;
-  --head:'Montserrat',system-ui,sans-serif; --body:'Lora',Georgia,serif; --script:'Mrs Saint Delafield',cursive;
+  --head:'Montserrat',system-ui,sans-serif; --body:'Lora',Georgia,serif; --script:'Ms Madi',cursive;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
