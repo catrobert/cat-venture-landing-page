@@ -6,7 +6,7 @@ window.SITE = {
   title: 'Mortgage Specialist',
   team: 'Venture Mortgages',
   brokerage: 'BRX Mortgage',          // BCFSA: brokerage name must appear
-  licence: '',                        // e.g. 'BCFSA Licence #X000000' – fill in before launch
+  licence: '· BCFSA Licence #MB602440',
   phone: '(778) 946-6690',
   email: 'cat@venturemortgages.com',
   booking: 'https://calendly.com/cat-venturemortgages/30min',
@@ -15,8 +15,8 @@ window.SITE = {
   pixelId: '',                        // e.g. '123456789012345'
 
   // Links page – paste each URL; any left blank is hidden on the page
-  instagram: '',                      // e.g. 'https://instagram.com/yourhandle'
-  facebook: '',
+  instagram: 'https://www.instagram.com/mortgageswithcat/',
+  facebook: 'https://www.facebook.com/cat.robert.391/',
   links: [
     { label: 'Grade My Mortgage',  note: 'See how your rate stacks up',       url: '' },
     { label: 'How Much Can I Afford?', note: 'Your max purchase price',       url: '' },
