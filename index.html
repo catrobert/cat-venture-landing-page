@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Cat Robert | Mortgage Specialist, Kelowna</title>
-<meta name="description" content="Let's make mortgages make sense. Helpful tools, real answers and a clear path forward from Cat Robert, Venture Mortgages.">
-<meta property="og:title" content="Let's make mortgages make sense. | Cat Robert">
+<title>Cat Robert | Kelowna Mortgage Broker · Venture Mortgages</title>
+<meta name="description" content="Good people deserve great mortgages. Helpful tools, real answers and a clear path forward from Cat Robert, Venture Mortgages.">
+<meta property="og:title" content="Good people deserve great mortgages. | Cat Robert">
 <meta property="og:description" content="Helpful tools, real answers, and a clear path forward.">
 <meta property="og:image" content="/assets/cat-portrait.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <style>
   .intro{background:var(--sand);text-align:center;padding:40px 24px 30px;position:relative;overflow:hidden}
   .intro .logo{width:84px;height:84px;border-radius:50%;background:var(--terracotta);margin:0 auto 20px;display:flex;align-items:center;justify-content:center}
-  .intro .logo svg{width:44px;color:#fff}
+  .intro .logo svg{width:58px;color:#fff;margin-left:-2px}
   .intro h1{font-family:var(--head);font-weight:600;font-size:27px;letter-spacing:-.01em}
   .intro .sub{color:var(--olive);margin-top:10px;font-size:17px}
   .intro .by{font-family:var(--head);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-top:12px}
@@ -46,6 +46,9 @@
   .link b{font-family:var(--head);font-weight:600;font-size:15px;display:block}
   .link span.n{font-size:14px;color:var(--muted)}
   .link .arr{margin-left:auto;color:var(--terracotta);font-family:var(--head)}
+  .link.soon{opacity:.6;cursor:default;border-style:dashed}
+  .link.soon:hover{border-color:var(--line)}
+  .link .badge{margin-left:auto;flex:0 0 auto;font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--olive);background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
   .link.feature{border-color:var(--terracotta);background:#FBF1EC}
   .nudge{margin-top:16px;padding:18px;border-radius:14px;background:var(--cream);text-align:center}
   .nudge p{font-size:15px;color:var(--muted);margin-bottom:12px}
@@ -54,7 +57,7 @@
   .quick a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 6px;border:1.5px solid var(--line);border-radius:14px;text-decoration:none;font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--white)}
   .quick svg{width:22px;height:22px;color:var(--terracotta)}
 
-  .about{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center}
+  .about{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
   .about img{border-radius:14px;aspect-ratio:3/4;object-fit:cover}
   .social{display:flex;gap:12px;margin-top:14px}
   .social a{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--charcoal);background:var(--white)}
@@ -67,8 +70,8 @@
 <div class="wrap">
 
   <div class="intro">
-    <div class="logo"><svg viewBox="0 0 48 36" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M6 30 14 6l10 14 6-10 12 20z"/></svg></div>
-    <h1>Let's make mortgages make sense.</h1>
+    <div class="logo"><svg viewBox="10 5 370 285" fill="none" stroke="currentColor" stroke-width="17" stroke-linejoin="miter" stroke-linecap="square" aria-label="Venture Mortgages"><path d="M130 120H28l75 152 115-217 30 73 40-108 72 185H210"/></svg></div>
+    <h1>Good people deserve great mortgages.</h1>
     <p class="sub">Helpful tools, real answers, and a clear path forward.</p>
     <div class="by"><span data-s="name">Cat Robert</span> · <span data-s="team">Venture Mortgages</span></div>
   </div>
@@ -127,11 +130,11 @@
 
   <!-- ===== About (always visible) ===== -->
   <section class="section-sand">
+    <div class="script" style="font-size:44px;margin-bottom:12px">Hey, I'm Cat!</div>
     <div class="about">
       <img src="/assets/cat-portrait.jpg" alt="Cat Robert">
       <div>
-        <div class="script" style="font-size:40px">Hi, I'm Cat</div>
-        <p style="margin-top:6px;font-size:16px">A Kelowna-based mortgage specialist with <span data-s="team">Venture Mortgages</span>. I'm not tied to one bank. I compare dozens of lenders and explain your options in plain language.</p>
+        <p style="font-size:16px">A Kelowna-based mortgage broker with <span data-s="team">Venture Mortgages</span> who believes you deserve to know what the heck is going on with your mortgage. I compare lenders, break down the confusing stuff, and help you make smart decisions with your money.</p>
         <div class="social" id="social"></div>
       </div>
     </div>
@@ -157,12 +160,18 @@
   // ---- build each path's calculator list from config (blank URLs skipped)
   ['buy','own'].forEach(g => {
     const box = document.querySelector('[data-links="'+g+'"]');
-    const items = (S.links || []).filter(l => l.url && (l.group === g || l.group === 'both'));
-    items.forEach((l, i) => {
-      const a = document.createElement('a');
-      a.className = 'link' + (i === 0 ? ' feature' : ''); a.href = l.url; a.target = '_blank'; a.rel = 'noopener';
-      a.dataset.ev = 'ToolClick'; a.dataset.tool = l.label;
-      a.innerHTML = '<span class="ic"></span><div><b></b><span class="n"></span></div><span class="arr">&rarr;</span>';
+    const items = (S.links || []).filter(l => l.group === g || l.group === 'both');
+    let featured = false;
+    items.forEach(l => {
+      const live = !!l.url;
+      const a = document.createElement(live ? 'a' : 'div');
+      a.className = 'link' + (live ? '' : ' soon');
+      if (live) {
+        if (!featured) { a.classList.add('feature'); featured = true; }
+        a.href = l.url; a.target = '_blank'; a.rel = 'noopener';
+        a.dataset.ev = 'ToolClick'; a.dataset.tool = l.label;
+      }
+      a.innerHTML = '<span class="ic"></span><div><b></b><span class="n"></span></div>' + (live ? '<span class="arr">&rarr;</span>' : '<span class="badge">Coming soon</span>');
       a.querySelector('.ic').textContent = l.label.trim()[0];
       a.querySelector('b').textContent = l.label; a.querySelector('.n').textContent = l.note || '';
       box.appendChild(a);
