@@ -9,7 +9,7 @@ window.SITE = {
   licence: '· BCFSA Licence #MB602440',
   phone: '(778) 946-6690',
   email: 'cat@venturemortgages.com',
-  booking: 'https://calendly.com/cat-venturemortgages/30min',
+  booking: 'https://www.venturemortgages.com/book-with-cat',
 
   // Meta pixel – one pixel for the whole site
   pixelId: '',                        // e.g. '123456789012345'
