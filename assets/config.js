@@ -11,16 +11,19 @@ window.SITE = {
   email: 'cat@venturemortgages.com',
   booking: 'https://calendly.com/cat-venturemortgages/30min',
 
-  // Lead delivery (Google Sheet via Apps Script web app)
-  leadUrl: '',                        // paste the Apps Script /exec URL here
-  leadToken: 'change-me-to-a-random-word', // must match SECRET in LeadIntake.gs
-
   // Meta pixel – one pixel for the whole site
   pixelId: '',                        // e.g. '123456789012345'
 
-  // Affordability assumptions – update when rates move
-  contractRate: 4.09,                 // best insured 5-yr fixed you can offer today (%)
-  stressFloor: 5.25,                  // minimum qualifying rate (%)
-  propertyTaxRate: 0.45,              // % of price per year (Kelowna-area estimate)
-  heatMonthly: 100                    // lender standard heating allowance ($/mo)
+  // Links page – paste each URL; any left blank is hidden on the page
+  instagram: '',                      // e.g. 'https://instagram.com/yourhandle'
+  facebook: '',
+  links: [
+    { label: 'Grade My Mortgage',  note: 'See how your rate stacks up',       url: '' },
+    { label: 'How Much Can I Afford?', note: 'Your max purchase price',       url: '' },
+    { label: 'Penalty Calculator', note: 'Cost to break your mortgage',       url: '' },
+    { label: 'Rent vs Buy',        note: 'Compare over time',                 url: '' },
+    { label: 'Fixed vs Variable',  note: 'Rate type scenarios',               url: '' },
+    { label: 'Prepayment Planner', note: 'Lump sums & payment increases',     url: '' },
+    { label: 'All Calculators',    note: 'Every tool in one place',           url: '' }
+  ]
 };

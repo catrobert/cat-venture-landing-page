@@ -1,2 +1,1 @@
-{ "cleanUrls": true, "trailingSlash": false,
-  "redirects": [{ "source": "/", "destination": "/first-home", "permanent": false }] }
+{ "cleanUrls": true, "trailingSlash": false }

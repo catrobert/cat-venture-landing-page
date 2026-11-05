@@ -33,12 +33,4 @@
     return [src, c, a].filter(Boolean).join(' / ') || 'direct';
   };
 
-  // ---- Send a lead to the Google Sheet
-  window.sendLead = function (lead) {
-    const body = JSON.stringify(Object.assign({ token: S.leadToken, campaign: window.campaignTag() }, lead));
-    if (!S.leadUrl) { console.log('[lead – no leadUrl set yet]', body); return Promise.resolve(); }
-    // text/plain + no-cors avoids the CORS preflight Apps Script can't answer
-    return fetch(S.leadUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body })
-      .catch(err => console.warn('lead send failed', err));
-  };
 })();
